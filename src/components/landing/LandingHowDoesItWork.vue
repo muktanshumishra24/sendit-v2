@@ -1,43 +1,16 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import LandingNumbers from "./LandingNumbers.vue";
 
 const currentSlide = ref(1);
-const totalSlides = 4;
-let carouselTimer: NodeJS.Timer;
-const carouselInterval = 4000;
-
-function nextSlide() {
-  if (currentSlide.value < totalSlides) {
-    currentSlide.value += 1;
-  } else {
-    currentSlide.value = 1;
-  }
-}
-
-function startAutoCarousel() {
-  carouselTimer = setInterval(() => {
-    nextSlide();
-  }, carouselInterval);
-}
-
-function stopAutoCarousel() {
-  clearInterval(carouselTimer);
-}
-
 onMounted(() => {
   window.matchMedia("(max-width: 767px)").addEventListener("change", (e) => {
     if (e.matches) {
       currentSlide.value = 1;
-      startAutoCarousel();
-    } else {
-      stopAutoCarousel();
     }
   });
 });
 
 onBeforeUnmount(() => {
-  stopAutoCarousel();
   window
     .matchMedia("(max-width: 767px)")
     .removeEventListener("change", () => {});

@@ -3,15 +3,11 @@ import useArcanaAuth from "@/use/arcanaAuth";
 import { onMounted } from "vue";
 import { useToast } from "vue-toastification";
 import useLoaderStore from "@/stores/loader";
-import { ref, defineAsyncComponent } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { normaliseEmail } from "@/utils/normalise";
 import useAuthStore from "@/stores/auth";
 import { isValidEmail } from "@/utils/validation";
-
-const LandingHeader = defineAsyncComponent(
-  () => import("@/components/landing/LandingHeader.vue")
-);
 
 const auth = useArcanaAuth();
 const toast = useToast();

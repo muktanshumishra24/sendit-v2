@@ -6,7 +6,6 @@ import {
   computed,
   type Ref,
   onBeforeMount,
-  onBeforeUnmount,
   ComputedRef,
 } from "vue";
 import sendVia from "@/constants/sendVia";
@@ -40,7 +39,7 @@ const emits = defineEmits(["transaction-successful"]);
 const ACTION_REJECTED = "ACTION_REJECTED";
 const INSUFFICIENT_FUNDS = "INSUFFICIENT_FUNDS";
 const SELF_TX_ERROR = "self-transactions are not permitted";
-let assetInterval: NodeJS.Timer;
+// let assetInterval: NodeJS.Timer;
 const refreshIconAnimating = ref(false);
 const route = useRoute();
 const router = useRouter();
@@ -102,9 +101,9 @@ onBeforeMount(async () => {
   loadStore.hideLoader();
 });
 
-onBeforeUnmount(() => {
-  clearInterval(assetInterval);
-});
+// onBeforeUnmount(() => {
+//   clearInterval(assetInterval as number);
+// });
 
 const sendStore = useSendStore();
 const authStore = useAuthStore();
