@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestRegular1602-hint.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestExtraBold1602-hint.woff")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestBold1602-hint.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestMedium1602-hint.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestLight1602-hint.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("@/assets/fonts/onest/WOFF/OnestThin1602-hint.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+.font-caveat {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  color: #fd7132;
+}
+
+.syne {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-bold {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  background-color: #0e0e0e;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Onest, sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  background-color: #0e0e0e;
+}
+
+#app {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.btn {
+  @apply p-2.5 rounded-md font-bold;
+}
+
+.btn-login {
+  @apply bg-eerie-black text-sm;
+}
+
+.btn-submit {
+  @apply bg-white text-black uppercase border-2;
+}
+
+.btn-submit-secondary {
+  @apply bg-transparent text-white uppercase border-2;
+}
+
+.input {
+  @apply outline-none border-none rounded-md p-2 bg-dark-charcoal placeholder:text-[#989898];
+}
+
+.form-card {
+  @apply flex flex-col items-center border-1 border-jet rounded-md bg-eerie-black;
+}
+
+.container {
+  @apply max-w-[1440px] mx-auto;
+}
+
+.landing-container {
+  @apply mx-auto max-w-[1180px] px-5;
+}
+
+.ellipsis {
+  @apply text-ellipsis whitespace-nowrap overflow-hidden;
+}
+
+.Vue-Toastification__container {
+  z-index: 999999999 !important;
+}
+
+.Vue-Toastification__toast {
+  min-height: unset !important;
+  max-height: 360px !important;
+  padding: 1.5rem 1rem !important;
+  font-family: Onest, sans-serif !important;
+  text-overflow: ellipsis !important;
+  background-color: #1f1f1f !important;
+  border-radius: 10px !important;
+  border: 1px solid #363636 !important;
+  align-items: center !important;
+}
+
+.Vue-Toastification__icon {
+  width: 24px !important;
+  margin-right: 16px !important;
+}
+
+.Vue-Toastification__toast-body {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+.Vue-Toastification__progress-bar {
+  height: 4px !important;
+}
+
+.Vue-Toastification__toast--success .Vue-Toastification__icon {
+  color: #15ac65 !important;
+}
+
+.Vue-Toastification__toast--success .Vue-Toastification__progress-bar {
+  background-color: #15ac65 !important;
+}
+
+.Vue-Toastification__toast--error .Vue-Toastification__icon {
+  color: #ff4264 !important;
+}
+
+.Vue-Toastification__toast--error .Vue-Toastification__progress-bar {
+  background-color: #ff4264 !important;
+}
+
+.landing-section-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+  line-height: 1.5rem;
+}
+
+.earn-section-title {
+  font-weight: 400;
+  font-size: x-large;
+  line-height: 1.5rem;
+}
+
+.getonweb3-section-title {
+  font-weight: 700;
+  font-size: x-large;
+  line-height: 3rem;
+}
+
+.faq-section-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5rem;
+}
+
+.landing-section-subtitle {
+  color: #a4a5a5;
+  font-size: 20px;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.landing-section-description {
+  color: #a4a5a5;
+  font-size: 25px;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.getonweb3-section-description {
+  color: #a4a5a5;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.faq-section-description {
+  color: #a4a5a5;
+  font-size: 25px;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-section-title {
+    font-size: 3.75rem;
+    line-height: 3rem;
+  }
+  .earn-section-title {
+    font-size: 3.75rem;
+    line-height: 3rem;
+  }
+  .getonweb3-section-title {
+    font-size: 3.75rem;
+    line-height: 3rem;
+  }
+
+  .faq-section-title {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+
+  .landing-section-subtitle {
+    font-size: 20px;
+    line-height: 1.75rem;
+  }
+
+  .landing-section-description {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .getonweb3-section-description {
+    font-size: 1.25rem;
+    line-height: 1.95rem;
+  }
+  .faq-section-description {
+    font-size: 1.25rem;
+    line-height: 1.95rem;
+  }
+}

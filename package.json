@@ -1,0 +1,46 @@
+{
+  "name": "send-it",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@arcana/auth": "^1.0.10",
+    "@fontsource/caveat": "^5.0.8",
+    "@fontsource/syne": "^5.0.8",
+    "@headlessui/vue": "^1.7.15",
+    "@vueuse/integrations": "^10.7.0",
+    "@wagmi/core": "^1.4.3",
+    "@web3modal/wagmi": "^3.0.2",
+    "aarc-sdk": "^0.2.0-beta.3",
+    "async-mutex": "^0.4.0",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "decimal.js": "^10.4.3",
+    "ethers": "^6.9.0",
+    "msgpackr": "^1.9.5",
+    "pinia": "^2.1.4",
+    "punycode": "^2.3.0",
+    "qrcode": "^1.5.3",
+    "recaptcha-v3": "^1.10.0",
+    "viem": "^1.14.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.2",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-carousel": "^0.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vite-plugin-node-polyfills": "^0.9.0",
+    "vue-tsc": "^1.4.2"
+  }
+}
